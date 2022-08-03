@@ -144,9 +144,13 @@ To configure a React application for Heroku, follow the steps below.  This initi
 
   You can also just type `heroku create` and Heroku will choose a random name for your project.
 
-3. Run the following command in your project directory in Terminal to configure Heroku for React:
+3. Run the following commands one at a time in your project directory in Terminal to configure Heroku for React:
 
   ```bash
+  heroku plugins:install buildpack-registry
+  
+  heroku plugins:install buildpacks  
+  
   heroku buildpacks:set mars/create-react-app
   ```
 
